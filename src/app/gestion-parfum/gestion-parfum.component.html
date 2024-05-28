@@ -1,0 +1,35 @@
+
+<div class="search-container container">
+    <input type="text" placeholder="Search..." class="form-control">
+</div>
+
+<table class="table table-striped ">
+<thead>
+    <tr>
+        <th>Images</th>
+        <th>Nom Parfum</th>
+        <th>Nom Magasin</th>
+        <th>Prix</th>
+        <th>Volume</th>
+        <th>Type</th>
+        <th>Marque</th>
+        <th>Action</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let parfum of parfums.slice().reverse() ">
+        <td><img alt="image du parfun"  src="{{parfum.imageParfum}}" height="90" width="90"></td>
+        <td id="nomParfum">{{ parfum.nomParfum }}</td>
+        <td id="nomMagasin">{{ parfum.nomMagasin }}</td>
+        <td>{{ parfum.prix }} dt</td>
+        <td>{{ parfum.volume }} ml</td>
+        <td >{{ parfum.type }}</td>
+        <td>{{ parfum.marque }}</td>
+        <td><button (click)="deleteParfum(parfum)" class=" mx-3 btn btn-danger">Delete</button>
+            <button (click)="editParfum(parfum)" class="btn btn-primary mx-2">Edit</button></td>
+        
+        
+
+    </tr>
+</tbody>
+</table>

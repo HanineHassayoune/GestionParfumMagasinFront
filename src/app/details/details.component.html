@@ -1,0 +1,19 @@
+<body style="background-color:#dce2ef;">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-4 mb-4" *ngFor="let parfum of parfums.slice().reverse()">
+              <div class="card">
+                  <img class="card-img-top" src="{{ parfum.imageParfum }}" alt="Card image cap">
+                  <div class="card-body">
+                      <h4 class="card-title">{{ parfum.nomParfum }}</h4>
+                      <h6 class="card-text">Nom du magasin : <i style="color: blue;"> {{ parfum.nomMagasin}}</i></h6>
+                      <h6 class="card-text">Prix : <i style="color: red;"> {{ parfum.prix }} dt</i></h6>
+                      <h6 class="card-text">Volume : <i style="color: green;"> {{ parfum.volume }} ml</i></h6>
+                      <h6 class="card-text">Type : {{ parfum.type }}</h6>
+                      <h6 class="card-text">Marque : {{ parfum.marque }}</h6>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
